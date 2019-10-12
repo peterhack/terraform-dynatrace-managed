@@ -13,8 +13,9 @@ created, which is used to install the Dynatrace Managed cluster on the hosts wit
 
 You need:
 
-1. [Terraform (0.12 or greater)](https://www.terraform.io/intro/getting-started/install.html) - `brew update && brew install terraform`
-2. An AWS account, configured with the cli locally -
+1. [Dynatrace Managed](https://www.dynatrace.com/support/help/get-started/get-started-with-dynatrace-managed/) subscription
+2. [Terraform (0.12 or greater)](https://www.terraform.io/intro/getting-started/install.html) - `brew update && brew install terraform`
+3. An AWS account, configured with the cli locally -
 ```
 if [[ "$unamestr" == 'Linux' ]]; then
         dnf install -y awscli || yum install -y awscli
@@ -22,7 +23,7 @@ elif [[ "$unamestr" == 'FreeBSD' ]]; then
         brew install -y awscli
 fi
 ```
-3. configure the following files to meet your specific needs:
+4. configure the following files to meet your specific needs:
 - [variables.tf](./variables.tf)
   - update aws "region"
   - update "dtmanaged_user"
@@ -32,7 +33,7 @@ fi
   - update "dtmanaged_user"
   - update "dtmanaged_user_email"
   - update "dtm_workshop"
-  
+
 ## Creating the Cluster
 
 Create the infrastructure first:
@@ -66,7 +67,7 @@ That's it! The infrastructure is ready and you can install OpenShift. Leave abou
 To install Dynatrace Managed into the cluster, just run:
 
 ```bash
-make managed
+make dtmanaged
 ```
 
 You will be asked to accept the host key of the bastion server (this is so that the install script can be copied onto the cluster and run), just type `yes` and hit enter to continue.
