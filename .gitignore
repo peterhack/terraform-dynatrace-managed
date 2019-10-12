@@ -1,0 +1,13 @@
+# Infrastructure ignores.
+.terraform
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+
+# The generated inventory file.
+inventory.cfg
+*.lock.info
+.private.env
+
+# DT Managed ignores
+./scripts/dtm-install.sh
