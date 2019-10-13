@@ -113,7 +113,7 @@ Bring everything down with:
 terraform destroy
 ```
 
-Resources which are dynamically provisioned by Kubernetes will not automatically be destroyed. This means that if you want to clean up the entire cluster, you must manually delete all of the EBS Volumes which have been provisioned to serve Persistent Volume Claims.
+This will first attempt to unregister your Dynatrace Managed license and then destroy the cluster.  If it fails to unregister, you must request this directly with Dynatrace to re-use the license
 
 ## Makefile Commands
 
