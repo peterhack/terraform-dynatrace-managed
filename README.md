@@ -104,6 +104,10 @@ The url will be something like `https://a.b.c.d.xip.io:8443`.
 
 The easiest way to configure is to change the settings in the [./inventory.template.cfg](./inventory.template.cfg) file.
 
+### Planned improvements
+
+- Automatic installation of ActiveGate using ```make activegate```.  This should include whether it is a [cluster-activegate](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-managed/installation/how-to-install-a-cluster-activegate/) or an [environment activegate](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-activegate/installation/install-an-environment-activegate/).  More information can be found [here](https://www.dynatrace.com/support/help/shortlink/managed-get-started#get-started-with-dynatrace-managed)
+- Automatic addition of multiple cluster nodes as part of the configuration decision at deployment time.  This will have to include additional cluster infrastructure as this initial deployment is a single node
 
 ## Destroying the Cluster
 
